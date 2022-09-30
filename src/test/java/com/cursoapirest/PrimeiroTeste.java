@@ -1,15 +1,22 @@
 package com.cursoapirest;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class PrimeiroTeste {
 
+    Calculadora calculadora;
+
+    @BeforeEach
+    public void setUp(){
+        calculadora = new Calculadora();
+    }
+
     @Test
     /* Importante o nome do teste ser relaiconado ao que deve fazer */
     public void deveSomarDoisNumeros(){
-        //cenario
-        Calculadora calculadora = new Calculadora();
         //execução
         int result = calculadora.somar(10,20);
 
@@ -20,10 +27,6 @@ public class PrimeiroTeste {
 
 //    @Test
 //    public void naoDeveSomarNumerosNegativos(){
-//        //cenario
-//        Calculadora calculadora = new Calculadora();
-//        //execução
-//
 //        Assertions.failBecauseExceptionWasNotThrown();
 //        int result = calculadora.somar(-10,15);
 //    }
