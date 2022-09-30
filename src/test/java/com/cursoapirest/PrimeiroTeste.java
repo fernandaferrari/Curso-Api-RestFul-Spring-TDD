@@ -1,15 +1,14 @@
 package com.cursoapirest;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 public class PrimeiroTeste {
 
     Calculadora calculadora;
 
-    @BeforeEach
+    @Before
     public void setUp(){
         calculadora = new Calculadora();
     }
